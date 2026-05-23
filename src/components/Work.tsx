@@ -12,21 +12,25 @@ const projects = [
     category: "Agentic Decision Intelligence",
     tools:
       "RAG, LangChain, LangGraph, OpenAI, HuggingFace, Pinecone, Embeddings",
+    image: "/images/projects/engauge-ai.webp",
   },
   {
     name: "AI Tutor",
     category: "Personalized Learning Assistant",
     tools: "LLMs, Prompt Engineering, Python, Semantic Search",
+    image: "/images/projects/ai-tutor.webp",
   },
   {
     name: "OCR Claims Automation",
     category: "Intelligent Process Automation",
     tools: "Python, Azure Cognitive Services, OCR, Data Processing",
+    image: "/images/placeholder.webp",
   },
   {
     name: "Visa Status Prediction",
     category: "Machine Learning",
     tools: "Scikit-learn, Pandas, NumPy, Feature Engineering",
+    image: "/images/placeholder.webp",
   },
 ];
 
@@ -90,7 +94,7 @@ const Work = () => {
                 <h4>Tools and features</h4>
                 <p>{project.tools}</p>
               </div>
-              <WorkImage image="/images/placeholder.webp" alt={project.name} />
+              <WorkImage image={project.image} alt={project.name} />
             </div>
           ))}
         </div>
