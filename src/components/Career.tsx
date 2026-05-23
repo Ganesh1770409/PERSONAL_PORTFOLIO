@@ -66,7 +66,7 @@ const Career = () => {
 
               </div>
 
-              <h3>2021–25</h3>
+              <h3>2021-2025</h3>
 
             </div>
 
@@ -96,7 +96,7 @@ const Career = () => {
 
               </div>
 
-              <h3>NOW</h3>
+              <h3>2025-Present</h3>
 
             </div>
 
