@@ -12,10 +12,6 @@ import {
 } from "@react-three/rapier";
 import { TECH_STACK_ICON_URLS } from "../data/techStack";
 
-const textureLoader = new THREE.TextureLoader();
-const imageUrls = TECH_STACK_ICON_URLS;
-const textures = imageUrls.map((url) => textureLoader.load(url));
-
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
 
 const spheres = [...Array(30)].map(() => ({
@@ -144,18 +140,20 @@ const TechStack = () => {
     };
   }, []);
   const materials = useMemo(() => {
-    return textures.map(
-      (texture) =>
-        new THREE.MeshPhysicalMaterial({
-          map: texture,
-          emissive: "#ffffff",
-          emissiveMap: texture,
-          emissiveIntensity: 0.3,
-          metalness: 0.5,
-          roughness: 1,
-          clearcoat: 0.1,
-        })
-    );
+    const textureLoader = new THREE.TextureLoader();
+    return TECH_STACK_ICON_URLS.map((url) => {
+      const texture = textureLoader.load(url);
+      texture.colorSpace = THREE.SRGBColorSpace;
+      return new THREE.MeshPhysicalMaterial({
+        map: texture,
+        emissive: "#ffffff",
+        emissiveMap: texture,
+        emissiveIntensity: 0.45,
+        metalness: 0.5,
+        roughness: 1,
+        clearcoat: 0.1,
+      });
+    });
   }, []);
 
   return (
