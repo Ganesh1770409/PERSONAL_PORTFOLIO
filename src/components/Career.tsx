@@ -38,7 +38,7 @@ const Career = () => {
 
               </div>
 
-              <h3>EDU</h3>
+              <h3>2016-2020</h3>
 
             </div>
 
