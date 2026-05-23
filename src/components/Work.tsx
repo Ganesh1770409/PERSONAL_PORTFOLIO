@@ -24,13 +24,13 @@ const projects = [
     name: "OCR Claims Automation",
     category: "Intelligent Process Automation",
     tools: "Python, Azure Cognitive Services, OCR, Data Processing",
-    image: "/images/placeholder.webp",
+    image: "/images/projects/claims-automation.webp",
   },
   {
     name: "Visa Status Prediction",
     category: "Machine Learning",
     tools: "Scikit-learn, Pandas, NumPy, Feature Engineering",
-    image: "/images/placeholder.webp",
+    image: "/images/projects/visa-status-prediction.webp",
   },
 ];
 
